@@ -9,8 +9,7 @@
 <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 <link href="https://file.myfontastic.com/n6vo44Re5QaWo8oCKShBs7/icons.css" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale = 1.0, user-scalable = no">
-
-
+<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
 </head>
 <body>
 <div class="transy"></div>
@@ -23,19 +22,17 @@
 		
 		<div class="content">
 				<p>I'm working on something very interesting!</p>
-		</div>
-		
-		
-		
-
+		</div>		
 		
 		<div class="form">
-			<p>comeback later to see it...</p>
-			<!--<div class="mainform">
-				<div class="field"><input type="text" class="field" id="test" value="example@youremail.com"  /></div>
-				<div class="submit"><input class="submit" type="button" value="Okay" /></div>						
-			</div>-->
+			<p>be notified when it will be ready:</p>
+			<div class="mainform">
+				<div class="field"><input type="text" class="field" id="mailme" placeholder="your@email.com"  /></div>
+				<div class="submit"><input class="submit" type="button" value="Okay" onclick="trypush()" /></div>				
+			</div>						
 		</div>
+		<div class="error hidden" id="error"><p>please check your email address first...</p></div>
+		<div class="thank hidden" id="thank"><p>Thanks for being interested in my work...</p></div>
 		
 		
 		
@@ -49,23 +46,47 @@
 		</p>
 		</div>
 	</div>
-</div>
-
+</div>	
 	
+    <script>
+		function validate(email) {
+    		var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    		return re.test(email);
+		}
+		
+		function trypush() {
+			var email = $('#mailme').val();
+		  
+			if (validate(email))
+			{
+		  		var currentDate = new Date()
+		  		var day = currentDate.getDate()
+		  	  	var month = currentDate.getMonth() + 1
+	  	  		var year = currentDate.getFullYear()
+				
+		  		var myDataRef = new Firebase('https://blistering-inferno-8251.firebaseio.com/');
+          		myDataRef.push({ 'date': day + "." + month + "." + year , 'email': email });
+				
+          		$('#mailme').val('');
+				$('#thank').removeClass("hidden");
+			}
+			else
+			{
+				$('#error').removeClass("hidden");
+			}			
+		}
 	
-		<script type="text/javascript">
-var placeholder = $("#test").val();
-
-$("#test").keydown(function() {
-    if (this.value == placeholder) {
-        this.value = '';
-    }
-}).blur(function() {
-    if (this.value == '') {
-        this.value = placeholder;
-    }
-});
-</script>
+	  $('#mailme').keypress(function (e) {
+          if (e.keyCode == 13) {
+			trypush();
+		  }
+		  else
+		  {			  
+			$('#error').addClass("hidden");
+			$('#thank').addClass("hidden");
+		  }
+      });
+    </script>
 
 </body>
 </html>

@@ -110,6 +110,24 @@ background-size: cover;
 	font-weight: 700;
 }
 
+.error p{
+	font-size: 18px;
+	font-weight: 300;
+	color: #d66;
+}
+
+.thank p{
+	font-size: 18px;
+	font-weight: 300;
+	color: #6d6;
+}
+
+
+.hidden p{
+	display:none;
+}
+
+
 
 
 
