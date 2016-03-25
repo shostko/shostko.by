@@ -10,6 +10,7 @@
 <link href="https://file.myfontastic.com/n6vo44Re5QaWo8oCKShBs7/icons.css" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale = 1.0, user-scalable = no">
 <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 </head>
 <body>
 
@@ -43,8 +44,10 @@
 				<div class="submit"><input class="submit" type="button" value="Okay" onclick="trypush()" /></div>				
 			</div>						
 		</div>
-		<div class="error hidden" id="error"><p>please check your email address first...</p></div>
-		<div class="thank hidden" id="thank"><p>Thanks for being interested in my work...</p></div>
+		<div class="messages">
+			<div class="error" id="error" style="display:none;"><p>please check your email address first...</p></div>
+			<div class="thank" id="thank" style="display:none;"><p>Thanks for being interested in my work...</p></div>
+		</div>
 		
 		
 		
@@ -61,7 +64,7 @@
 	</div>
 </div>	
 	
-    <script>
+    <script>		
 		function validate(email) {
     		var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     		return re.test(email);
@@ -81,13 +84,14 @@
           		myDataRef.push({ 'date': day + "." + month + "." + year , 'email': email });
 				
           		$('#mailme').val('');
-				$('#thank').removeClass("hidden");
+				$('#thank').fadeIn();				
+				$('#error').fadeOut();
 								
   				ga('send', 'event', 'mailme', 'success', email);
 			}
 			else
 			{
-				$('#error').removeClass("hidden");
+				$('#error').fadeIn();
 				
   				ga('send', 'event', 'mailme', 'error', email);
 			}	
@@ -98,9 +102,9 @@
 			trypush();
 		  }
 		  else
-		  {			  
-			$('#error').addClass("hidden");
-			$('#thank').addClass("hidden");
+		  {
+			$('#error').fadeOut();
+			$('#thank').fadeOut();
 		  }
       });
     </script>

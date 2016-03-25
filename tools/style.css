@@ -122,9 +122,8 @@ background-size: cover;
 	color: #6d6;
 }
 
-
-.hidden p{
-	display:none;
+.messages p{
+	height: 18px;
 }
 
 
