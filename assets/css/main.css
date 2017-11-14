@@ -2488,8 +2488,13 @@
 				min-height: 300px;
 			}
 
+			.box.post h1 {
+				font-size: 2em;
+				line-height: 1.25em;
+			}
+
 			.box.post h2 {
-				font-size: 3.25em;
+				font-size: 1.25em;
 				line-height: 1.25em;
 			}
 
@@ -2497,6 +2502,11 @@
 				padding: 2.75em 0 0 0;
 				margin: 0 0 3em 0;
 			}
+
+				.box.post header h2 {
+					font-size: 3.25em;
+					line-height: 1.25em;
+				}
 
 				.box.post header > p {
 					font-size: 2.25em;
@@ -2600,15 +2610,25 @@
 
 		/* Box */
 
-			.box.post h2 {
-				font-size: 3.25em;
-				line-height: 1.25em;
-			}
+		    .box.post h1 {
+		      font-size: 2em;
+		      line-height: 1.25em;
+		    }
+
+		    .box.post h2 {
+		      font-size: 1.25em;
+		      line-height: 1.25em;
+		    }
 
 			.box.post header {
 				padding: 1.5em 0 0 0;
 				margin: 0 0 3em 0;
 			}
+
+		        .box.post header h2 {
+		          font-size: 3.25em;
+		          line-height: 1.25em;
+		        }
 
 				.box.post header > p {
 					font-size: 1.75em;
@@ -2718,9 +2738,19 @@
 				letter-spacing: 0;
 			}
 
+		    h1 {
+		      font-size: 2em;
+		      line-height: 1.25em;
+		    }
+
 			h2, h3, h4, h5, h6 {
 				font-size: 1.5em;
 			}
+
+			.box.post header h2 {
+          		font-size: 2.25em;
+          		line-height: 1.25em;
+        	}
 
 		/* Section/Article */
 
