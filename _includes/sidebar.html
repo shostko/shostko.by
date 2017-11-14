@@ -1,0 +1,145 @@
+<div id="sidebar">
+
+        <!-- Logo -->
+          <h1 id="logo"><a href="{{ "/" | relative_url }}">{{ site.title_short | escape }}</a></h1>
+
+        <!-- Nav -->
+          <nav id="nav">
+            <ul>
+              {% assign links = site.data.navigation %}
+              {% for link in links %}
+                {% assign class = nil %}
+                {% if link.url.size == 1 %}
+                  {% if link.url == page.url %}
+                    {% assign class = 'current' %}
+                  {% endif %}
+                {% elsif page.url contains link.url %}
+                  {% assign class = 'current' %}                
+                {% endif %}
+                <li class="{{ class }}"><a href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
+              {% endfor %}
+            </ul>
+          </nav>
+        
+        <!-- Search -->
+          <section class="box search">
+            <form method="post" action="#">
+              <input type="text" class="text" name="search" placeholder="Search" />
+            </form>
+          </section>
+
+        <!-- Text -->
+          <section class="box text-style1">
+            <div class="inner">
+              <p>
+                Tags: 
+                {% capture temptags %}
+                  {% for tag in site.tags %}
+                    {{ tag[1].size | plus: 10000 }}#{{ tag[0] }}#{{ tag[1].size }}
+                  {% endfor %}
+                {% endcapture %}
+                {% assign sortedtemptags = temptags | split:' ' | sort | reverse %}
+                {% assign tagscount = sortedtemptags.size %}
+                {% if tagscount > 20 %}
+                  {% assign tagscount = 20 %}
+                {% endif %}
+                {% assign tagscount = tagscount | minus,1 %}
+                {% for temptag in sortedtemptags limit:tagscount %}
+                  {% assign tagitems = temptag | split: '#' %}
+                  {% capture tagname %}{{ tagitems[1] }}{% endcapture %}
+                  <a href="/tag/{{ tagname }}">{{ tagname }}</a>,
+                {% endfor %}
+                {% for temptag in sortedtemptags limit:1 offset:tagscount %}
+                  {% assign tagitems = temptag | split: '#' %}
+                  {% capture tagname %}{{ tagitems[1] }}{% endcapture %}
+                  <a href="/tag/{{ tagname }}">{{ tagname }}</a>
+                {% endfor %}
+              </p>
+            </div>
+          </section>
+
+        <!-- Recent Posts -->
+          <section class="box recent-posts">
+            <header>
+              <h2>Recent Posts</h2>
+            </header>
+            <ul>
+              {% for post in site.posts limit:5 %}
+              <li><a href="{{ post.url | relative_url }}">{{ post.title | escape | truncate: 27, '...' }}</a></li>
+              {% endfor %}
+            </ul>
+          </section>
+
+        <!-- Calendar -->
+          <!-- <section class="box calendar">
+            <div class="inner">
+              <table>
+                <caption>November 2017</caption>
+                <thead>
+                  <tr>
+                    <th scope="col" title="Monday">M</th>
+                    <th scope="col" title="Tuesday">T</th>
+                    <th scope="col" title="Wednesday">W</th>
+                    <th scope="col" title="Thursday">T</th>
+                    <th scope="col" title="Friday">F</th>
+                    <th scope="col" title="Saturday">S</th>
+                    <th scope="col" title="Sunday">S</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td colspan="2" class="pad"><span>&nbsp;</span></td>
+                    <td><span>1</span></td>
+                    <td><span>2</span></td>
+                    <td><span>3</span></td>
+                    <td><span>4</span></td>
+                    <td><span>5</span></td>
+                  </tr>
+                  <tr>
+                    <td><span>6</span></td>
+                    <td><a href="#">7</a></td>
+                    <td><span>8</span></td>
+                    <td><span>9</span></td>
+                    <td><a href="#">10</a></td>
+                    <td><span>11</span></td>
+                    <td><span>12</span></td>
+                  </tr>
+                  <tr>
+                    <td class="today"><span>13</span></td>
+                    <td><span>14</span></td>
+                    <td><span>15</span></td>
+                    <td><a href="#">16</a></td>
+                    <td><span>17</span></td>
+                    <td><span>18</span></td>
+                    <td><span>19</span></td>
+                  </tr>
+                  <tr>
+                    <td><span>20</span></td>
+                    <td><span>21</span></td>
+                    <td><span>22</span></td>
+                    <td><span>23</span></td>
+                    <td><span>24</span></td>
+                    <td><a href="#">25</a></td>
+                    <td><span>26</span></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">27</a></td>
+                    <td><span>28</span></td>
+                    <td><span>29</span></td>
+                    <td><span>30</span></td>
+                    <td class="pad" colspan="3"><span>&nbsp;</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section> -->
+
+        <!-- Copyright -->
+          <ul id="copyright">
+            <li>&copy; {{ site.author_name }}</li>
+          </ul>
+
+        <!-- RSS -->
+          <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+
+      </div>
