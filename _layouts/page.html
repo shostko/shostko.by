@@ -1,14 +1,28 @@
 ---
 layout: default
 ---
-<article class="post">
+            <article class="box post post-excerpt">
+              <header>
+                {% comment %}
+                  Note: Titles and subtitles will wrap automatically when necessary, so don't worry
+                  if they get too long. You can also remove the <p> entirely if you don't
+                  need a subtitle.
+                {% endcomment %}
+                <h2>{{ page.title | escape }}</h2>
+                <p>{{ page.subtitle | escape }}</p>
+              </header>
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title | escape }}</h1>
-  </header>
+              {% if page.image %}
+                {% assign postimage = page.image %}
+              {% elsif page.image_local %}
+                {% assign postimage = page.image_local | relative_url %}
+              {% else %}
+                {% assign postimage = nil %}
+              {% endif %}              
+              {% if postimage %}
+                <img src="{{ postimage }}" alt="{{ post.title | escape }}" class="image featured" />
+              {% endif %}
 
-  <div class="post-content">
-    {{ content }}
-  </div>
-
-</article>
+			   {{ content }}
+			   
+			</article>

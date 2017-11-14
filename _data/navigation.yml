@@ -1,8 +1,6 @@
 - title: Blog
   url: /
 - title: Archives
-  url: /archives.html
+  url: /archives
 - title: About
-  url: /about.html
-- title: 404
-  url: /404.html
+  url: /about
