@@ -6,11 +6,12 @@
         <!-- Nav -->
           <nav id="nav">
             <ul>
+              {% assign paginate_path_start = site.paginate_path | split:":num" | first %}
               {% assign links = site.data.navigation %}
               {% for link in links %}
                 {% assign class = nil %}
                 {% if link.url.size == 1 %}
-                  {% if link.url == page.url %}
+                  {% if link.url == page.url or page.url contains paginate_path_start %}
                     {% assign class = 'current' %}
                   {% endif %}
                 {% elsif page.url contains link.url %}
