@@ -52,7 +52,11 @@
 			// Title Bar.
 				$(
 					'<div id="titleBar">' +
-						'<a href="#sidebar" class="toggle"></a>' +
+  						'<section class="material-design-hamburger toggle">' +
+    						'<button class="material-design-hamburger__icon" onclick="hamburgerClick()">' +
+      							'<span class="material-design-hamburger__layer"></span>' +
+    						'</button>' +
+  						'</section>' +
 						'<span class="title">' + $('#logo').html() + '</span>' +
 					'</div>'
 				)
