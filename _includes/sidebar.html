@@ -137,10 +137,17 @@
 
         <!-- Copyright -->
           <ul id="copyright">
-            <li>&copy; {{ site.author_name }}</li>
+            <li>&copy; {{ site.owner_name }}</li>
           </ul>
 
-        <!-- RSS -->
-          <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+        <!-- Socials -->
+          <div id="socials">
+          <a href="https://vk.com/{{ site.owner_vk }}" class="icon fa-vk" target="_blank"> </a>
+          <a href="https://www.facebook.com/{{ site.owner_fb }}" class="icon fa-facebook-square" target="_blank"> </a>
+          <a href="https://www.instagram.com/{{ site.owner_insta }}" class="icon fa-instagram" target="_blank"> </a>
+          <a href="https://github.com/{{ site.owner_github }}" class="icon fa-github" target="_blank"> </a>
+          <a href="mailto:{{ site.owner_email }}" class="icon fa-envelope" target="_blank"> </a>
+          <a href="{{ "/feed.xml" | relative_url }}" class="icon fa-rss" target="_blank"> </a>
+          </div>
 
       </div>

@@ -11,18 +11,22 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Personal site of Sergey 
+title: Personal site of Sergey Shostko
 title_short: shostko.by
-email: sergey@shostko.by
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-author_name: Sergey Shostko
-twitter_username: SergeyShostko
-github_username:  shostko
+owner_name: Sergey Shostko
+owner_twitter: SergeyShostko
+owner_github:  shostko
+owner_vk:  s.shostko
+owner_fb:  s.shostko
+owner_insta:  s.shostko
+owner_skype:  s.shostko
+owner_email:  sergey@shostko.by
 
 paginate: 5
 paginate_path: "/blog/page:num/"
