@@ -107,6 +107,21 @@ article{
 	letter-spacing: 3px;
 }
 
+.project-date {
+	text-transform: uppercase;
+	font-size: 14px;
+	letter-spacing: 3px;
+}
+.project-role {
+	font-size: 14px;
+	letter-spacing: 1px;
+	font-family: 'Ubuntu', sans-serif;
+}
+.project-technologies {
+	letter-spacing: 1px;
+	font-family: 'Ubuntu', sans-serif;
+}
+
 article {
 	padding: 0 5% 0;
 }

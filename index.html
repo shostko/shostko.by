@@ -7,7 +7,7 @@ tagline:
 
 <article class="home">
 
-  <span class="post-date">
+  <span class="project-date">
     {% if project.date_end %}
       {{ project.date_start | date: "%B %Y" }} - {{ project.date_end | date: "%B %Y" }}
     {% else %}
@@ -15,7 +15,18 @@ tagline:
     {% endif %}
   </span>
 
+  {% if project.image %}
+    <img src="{{ site.BASE_PATH }}{{ project.image }}" height="96" width="96" style="float: right; margin: 15px 15px 15px 15px;">
+  {% endif %}   
+
   <h2>
+    {% if project.url_store %}
+      <a href="{{ project.url_store }}" target="_blank"><img src="{{ site.BASE_PATH }}/assets/icon/play-store.png" alt="'{{ project.title }}' on play store" height="32" width="32"></a>
+    {% endif %}
+    {% if project.url_github %}
+      <a href="{{ project.url_github }}" target="_blank"><img src="{{ site.BASE_PATH }}/assets/icon/url_github.png" alt="'{{ project.title }}' on url_github" height="32" width="32"></a>
+    {% endif %}
+    {% assign title_full = page.date | date: "%d" | plus:'0' %}
     {% if project.url_local %}
       <a href="{{ site.BASE_PATH }}{{ project.url }}">{{ project.title }}</a>
     {% elsif project.url_external %}
@@ -25,7 +36,7 @@ tagline:
     {% endif %}
   </h2>  
 
-  <div>
+  <div> 
     {% if project.fullview %}
       {{ project.content }}
     {% else %}
@@ -38,6 +49,20 @@ tagline:
       {% endif %}
     {% endif %}
   </div>
+
+  {% if project.side or project.role %}
+    <p> 
+      {% if project.side %}
+        <span class="project-role">Own project</span>
+      {% elsif project.role %}
+        <span class="project-role">Role:</span> {{ project.role }}
+      {% endif %}
+    </p>
+
+    {% if project.technologies %}
+      <p><span class="project-technologies">Technologies:</span> {{ project.technologies }}</p>
+    {% endif %}
+  {% endif %}
 
 </article>
 
