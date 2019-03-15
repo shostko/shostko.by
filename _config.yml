@@ -13,8 +13,8 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: shostko.by
-email: sergey@shostko.by
+title: Sergey Shostko
+email: s.shostko@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
@@ -23,11 +23,11 @@ google_analytics: UA-75610602-4
 
 author:
   name: Sergey Shostko
-  email: sergey@shostko.by
+  email: s.shostko@gmail.com
   github: shostko
   skype: s.shostko
   bio: Android Group Lead @instinctools
-  email_md5: 95d6687dfbab474ccbf34579b60e3782
+  email_md5: 42dfae824cdccebc0e9180487d59ccb0у
 
 BASE_PATH:
 
