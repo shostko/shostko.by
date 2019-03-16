@@ -1,5 +1,4 @@
 ---
-layout: post
 customer: Helvar
 title:  "Room Set"
 role:	Lead Android developer

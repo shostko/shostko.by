@@ -1,5 +1,4 @@
 ---
-layout: post
 title:  "Beam"
 date_start:   2018-11-14 00:00:00 +0300
 date_end:   2019-02-26 23:59:59 +0300
