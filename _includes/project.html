@@ -5,16 +5,36 @@
 <article>
 
 	<div class="col-sm-10">
+  
 	 <span class="project-date">
 	    {% if page.date_end %}
 	      {{ page.date_start | date: "%B %Y" }} - {{ page.date_end | date: "%B %Y" }}
 	    {% else %}
 	      since {{ page.date_start | date: "%B %Y" }}
 	    {% endif %}
-	 </span>
+	 </span> 
+
+	  {% if page.image %}
+	    <img src="{{ site.BASE_PATH }}{{ page.image }}" height="192" width="192" style="float: right; margin: 15px 15px 15px 15px;">
+	  {% endif %} 
+
 	  <div class="article_body">
 	  {{ content }}
-	  </div>
+	  </div> 
+
+	  {% if page.own or page.role %}
+	    <p> 
+	      {% if page.own %}
+	        <span class="project-role">Own project</span>
+	      {% elsif page.role %}
+	        <span class="project-role">Role:</span> {{ page.role }}
+	      {% endif %}
+	    </p>
+	  {% endif %}
+
+	  {% if page.technologies %}
+	      <p><span class="project-technologies">Technologies:</span> {{ page.technologies }}</p>
+	  {% endif %}
 	
 	<div class="col-sm-2 sidebar-2">
 	

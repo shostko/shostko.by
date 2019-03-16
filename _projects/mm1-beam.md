@@ -2,7 +2,7 @@
 title:  "Beam"
 date_start:   2018-11-14 00:00:00 +0300
 date_end:   2019-02-26 23:59:59 +0300
-image: /assets/project/shostko-s13.png
+image: /assets/project/mm1-beam.png
 url_external:
 url_local: false
 url_store: 

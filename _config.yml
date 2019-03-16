@@ -41,12 +41,24 @@ plugins:
 collections:
   projects:
     output: false
-    side: false
-    url_local: false
   own:
     output: true
     permalink: /project/:title
-    side: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      side: false
+      url_local: false
+  - scope:
+      path: ""
+      type: "own"
+    values:
+      layout: "project"
+      own: true
+      url_local: true
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
