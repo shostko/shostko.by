@@ -39,7 +39,14 @@ plugins:
 #  - jekyll-paginate
 
 collections:
-  - projects
+  projects:
+    output: false
+    side: false
+    url_local: false
+  own:
+    output: true
+    permalink: /project/:title
+    side: true
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

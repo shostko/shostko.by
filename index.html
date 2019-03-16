@@ -2,8 +2,8 @@
 layout: page
 tagline:
 ---
-
-{% for project in site.projects %}
+{% assign projects = site.projects | concat: site.own | sort:"date_start" | reverse %}
+{% for project in projects %}
 
 <article class="home">
 

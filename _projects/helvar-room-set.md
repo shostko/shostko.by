@@ -10,6 +10,7 @@ url_external: https://www.helvar.com/en/
 url_local: false
 url_store: 
 fullview: false
+permalink: 
 excerpt_separator: <!--more-->
 ---
 The app for standalone lighting system installers for easy, intuitive and fast configuration of room lighting system that can include luminaires, sensors and wall panels with wireless and/or DALI wired connections.
