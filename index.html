@@ -26,13 +26,23 @@ tagline:
     {% if project.url_github %}
       <a href="{{ project.url_github }}" target="_blank"><img src="{{ site.BASE_PATH }}/assets/icon/url_github.png" alt="'{{ project.title }}' on github" height="32" width="32"></a>
     {% endif %}
-    {% assign title_full = page.date | date: "%d" | plus:'0' %}
     {% if project.url_local %}
       <a href="{{ site.BASE_PATH }}{{ project.url }}">{{ project.title }}</a>
     {% elsif project.url_external %}
       <a href="{{ project.url_external }}" target="_blank">{{ project.title }}</a>
     {% else %}
       {{ project.title }}
+    {% endif %}
+    {% if project.customer %}
+      <small>for 
+      {% if project.url_customer %}
+        <a href="{{ project.url_customer }}" target="_blank" style="color: #999;">
+      {% endif %}
+      {{ project.customer }}
+      {% if project.url_customer %}
+        </a>
+      {% endif %}
+      </small>
     {% endif %}
   </h2>  
 

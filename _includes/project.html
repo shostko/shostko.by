@@ -1,11 +1,21 @@
 <div class="page-header">
-  <h1>{{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1>
+  <h1>{{ page.title }} {% if page.customer %}
+      <small>for 
+      {% if page.url_customer %}
+        <a href="{{ project.url_customer }}" target="_blank" style="color: #999;">
+      {% endif %}
+      {{ page.customer }}
+      {% if page.url_customer %}
+        </a>
+      {% endif %}
+      </small>
+    {% endif %}</h1>
 </div>
 	
 <article>
 
 	<div class="col-sm-10">
-  
+
 	 <span class="project-date">
 	    {% if page.date_end %}
 	      {{ page.date_start | date: "%B %Y" }} - {{ page.date_end | date: "%B %Y" }}
