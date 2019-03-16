@@ -30,7 +30,7 @@ tagline:
     {% if project.url_local %}
       <a href="{{ site.BASE_PATH }}{{ project.url }}">{{ project.title }}</a>
     {% elsif project.url_external %}
-      <a href="{{ project.url_external }}">{{ project.title }}</a>
+      <a href="{{ project.url_external }}" target="_blank">{{ project.title }}</a>
     {% else %}
       {{ project.title }}
     {% endif %}
