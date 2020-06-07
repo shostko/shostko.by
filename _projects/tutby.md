@@ -15,5 +15,5 @@ excerpt_separator: <!--more-->
 ---
 TUT.BY is a popular Belarusian news portal. Mobile client app for it provides:
 - Latest actual news;
-- Mix online and offline app modes.;
+- Mix online and offline app modes;
 - Location based news separation.

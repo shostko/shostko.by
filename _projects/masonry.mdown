@@ -1,6 +1,7 @@
 ---
 title: "Masonry.TV"
-customer:
+customer: "*instinctools"
+url_customer: https://www.instinctools.com/
 role:	Software Architect
 date_start: 2019-10-01 00:00:00 +0300
 date_end:

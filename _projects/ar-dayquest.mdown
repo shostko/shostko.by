@@ -14,5 +14,5 @@ fullview: false
 excerpt_separator: <!--more-->
 ---
 Mobile location-based game with elements of augmented reality. It consists of two modes: 
-- game designer/creator for creating locations to be found
-- player for questing. 
+- Game designer/creator for creating locations to be found;
+- Player for questing. 

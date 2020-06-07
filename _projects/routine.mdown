@@ -15,4 +15,5 @@ fullview: false
 excerpt_separator: <!--more-->
 ---
 Once task list. No calendar. No date. No priority.
+
 The app was written on different technologies as a show case of possibilities for each of them: Native Android and iOS, ReactNative, Flutter, KotlinMultiPlatform.
