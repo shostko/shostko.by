@@ -41,6 +41,11 @@
 			<a type="button" class="navbar-toggle nav-link" href="mailto:{{ site.author.email }}">
 				<i class="fa fa-envelope"></i>
 			</a>
+			{% endif %}			
+			{% if site.author.linkedin %}
+			<a type="button" class="navbar-toggle nav-link" href="https://linkedin.com/in/{{ site.author.linkedin }}" target="_blank">
+				<i class="fa fa-linkedin"></i>
+			</a>
 			{% endif %}
 			{% if site.author.skype %}
 			<a type="button" class="navbar-toggle nav-link" href="skype:{{ site.author.skype }}?chat">
