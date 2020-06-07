@@ -8,7 +8,9 @@ tagline:
 <article class="home">
 
   <span class="project-date">
-    {% if project.date_end %}
+    {% if page.years %}
+      {{ page.years}}
+    {% elsif page.date_end %}
       {{ project.date_start | date: "%B %Y" }} - {{ project.date_end | date: "%B %Y" }}
     {% else %}
       since {{ project.date_start | date: "%B %Y" }}
@@ -46,7 +48,7 @@ tagline:
     <img src="{{ site.BASE_PATH }}{{ project.image }}" height="96" width="96" style="float: right; margin: 0 15px 0 15px;">
   {% endif %}  
 
-  <div> 
+  <p> 
     {% if project.fullview %}
       {{ project.content }}
     {% else %}
@@ -58,7 +60,7 @@ tagline:
         {{ project.excerpt }}
       {% endif %}
     {% endif %}
-  </div>
+  </p>
 
   {% if project.own or project.role %}
     <p> 
