@@ -25,10 +25,10 @@ tagline:
 
   <h2>
     {% if project.url_store %}
-      <a href="{{ project.url_store }}" target="_blank"><img src="{{ site.BASE_PATH }}/assets/icon/play-store.png" alt="'{{ project.title }}' on play store" height="32" width="32"></a>
+      <a href="{{ project.url_store }}" target="_blank"><img src="{{ site.BASE_PATH }}/assets/icon/play-store.png" style="vertical-align: baseline;" alt="'{{ project.title }}' on play store"></a>
     {% endif %}
     {% if project.url_github %}
-      <a href="{{ project.url_github }}" target="_blank"><img src="{{ site.BASE_PATH }}/assets/icon/github.png" alt="'{{ project.title }}' on github" height="32" width="32"></a>
+      <a href="{{ project.url_github }}" target="_blank"><img src="{{ site.BASE_PATH }}/assets/icon/github.png" style="vertical-align: baseline;" alt="'{{ project.title }}' on github"></a>
     {% endif %}
     {% if project.url_local %}
       <a href="{{ site.BASE_PATH }}{{ project.url }}">{{ project.title }}</a>
