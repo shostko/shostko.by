@@ -7,7 +7,7 @@ date_start: 2020-04-01 00:00:00 +0300
 date_end: 2020-05-15 00:00:00 +0300
 image: /assets/project/bonnet.png
 image_size: 192
-technologies: GoogleMaps, Firebase Authentication, Pusher, Socket.io, Stripe
+technologies: Jetpack Navigation, GoogleMaps, Firebase Authentication, Pusher, Socket.io, Stripe
 url_external:
 url_local: false
 url_store: 
