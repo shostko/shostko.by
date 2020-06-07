@@ -5,7 +5,12 @@ tagline:
 {% assign projects = site.projects | concat: site.own | sort:"date_start" | reverse %}
 {% for project in projects %}
 
+{% if project.image %}
+<article class="home" style="min-height: 300px">
+  <img src="{{ site.BASE_PATH }}{{ project.image }}" height="300" width="300" style="float: right; margin: 0 15px 0 15px;">
+{% else %}
 <article class="home">
+{% endif %} 
 
   <span class="project-date">
     {% if project.years %}
@@ -42,11 +47,7 @@ tagline:
       {% endif %}
       </small>
     {% endif %}
-  </h2>  
-
-  {% if project.image %}
-    <img src="{{ site.BASE_PATH }}{{ project.image }}" height="96" width="96" style="float: right; margin: 0 15px 0 15px;">
-  {% endif %}  
+  </h2>   
 
   <p> 
     {% if project.fullview %}
