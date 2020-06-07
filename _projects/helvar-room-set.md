@@ -4,6 +4,7 @@ customer: Helvar
 url_customer: https://www.helvar.com/en/
 role:	Lead Android developer
 date_start:   2017-11-16 00:00:00 +0300
+date_end: 2019-04-30 00:00:00 +0300
 image: /assets/project/helvar-room-set.png
 technologies: BLE, Room Persistence, Dagger, RxJava, Priority Job Queue, NFC, MVP, DALI communication protocol
 url_external: 
