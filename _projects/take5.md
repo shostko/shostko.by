@@ -1,8 +1,9 @@
 ---
 title:  "Take5"
 customer:
-date_start:   2011-05-01 00:00:00 +0300
-date_end:   2012-09-27 23:59:59 +0300
+role: Junior Android developer
+years: 2011-2012
+date_start: 2011-12-01 00:00:00 +0300
 image: 
 technologies: Google Play Services, NFC, Phone Contacts integration, SQLite, Custom Widgets
 url_external:

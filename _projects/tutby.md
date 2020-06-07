@@ -1,8 +1,9 @@
 ---
 title:  "TUT.BY News"
 customer: TUT.BY
-date_start:   2011-10-01 00:00:00 +0300
-date_end:   2012-04-27 23:59:59 +0300
+years: 2011-2012
+date_start: 2011-10-01 00:00:00 +0300
+role: Junior Android developer
 image: 
 technologies: SQLite, Services API, Custom widgets, Google Analytics
 url_external:

@@ -1,6 +1,6 @@
 ---
-title: "Lorem Ipsum"
-date_start: 2019-03-15 00:00:00 +0300
+title: "shostko.by"
+date_start: 2020-05-15 00:00:00 +0300
 image: /assets/project/lorem-ipsum.gif
 technologies: Jekyll, Liquid, html, css
 fullview: false
