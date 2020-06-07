@@ -4,7 +4,8 @@ customer:
 role:	Software Architect
 date_start: 2019-10-01 00:00:00 +0300
 date_end:
-image: 
+image: /assets/project/masonry.png
+image_size: 192
 technologies: Android TV, Leanback, Cross App Communication
 url_external: 
 url_customer:
