@@ -31,7 +31,8 @@
 	  {% endif %} 
 
 	  <div class="article_body">
-	  {{ content }}
+	  {{ content | strip }}
+	  <br>
 	  </div> 
 
 	  {% if page.own or page.role %}
