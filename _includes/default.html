@@ -17,7 +17,7 @@
 	{% endcomment %}
 
 	<link href="{{ site.BASE_PATH }}/assets/resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<link href="{{ site.BASE_PATH }}/assets/resources/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="{{ site.BASE_PATH }}/assets/resources/font-awesome/css/all.css" rel="stylesheet">
 	<link href="{{ site.BASE_PATH }}/assets/resources/syntax/syntax.css" rel="stylesheet">
 	<link href="{{ site.BASE_PATH }}/assets/css/style.css" rel="stylesheet">
 
@@ -39,29 +39,29 @@
 		<div class="navbar-header">
 			{% if site.author.email %}
 			<a type="button" class="navbar-toggle nav-link" href="mailto:{{ site.author.email }}">
-				<i class="fa fa-envelope"></i>
+				<i class="fas fa-envelope"></i>
 			</a>
 			{% endif %}	
 			{% comment %}		
 				{% if site.author.linkedin %}
 				<a type="button" class="navbar-toggle nav-link" href="https://linkedin.com/in/{{ site.author.linkedin }}" target="_blank">
-					<i class="fa fa-linkedin"></i>
+					<i class="fab fa-linkedin"></i>
 				</a>
 				{% endif %}
 				{% if site.author.skype %}
 				<a type="button" class="navbar-toggle nav-link" href="skype:{{ site.author.skype }}?chat">
-					<i class="fa fa-skype"></i>
+					<i class="fab fa-skype"></i>
 				</a>
 				{% endif %}
 			{% endcomment %}
 			{% if site.author.github %}
 			<a type="button" class="navbar-toggle nav-link" href="http://github.com/{{ site.author.github }}" target="_blank">
-				<i class="fa fa-github"></i>
+				<i class="fab fa-github"></i>
 			</a>
 			{% endif %}
 			{% if site.author.playconsole %}
 			<a type="button" class="navbar-toggle nav-link" href="https://play.google.com/store/apps/dev?id={{ site.author.playconsole }}">
-				<i class="fa fa-play"></i>
+				<i class="fab fa-google-play"></i>
 			</a>
 			{% endif %}	
 			<a class="navbar-brand" href="{{ site.BASE_PATH }}/">
