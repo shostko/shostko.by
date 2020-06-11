@@ -29,10 +29,11 @@ plugins:
 
 collections:
   projects:
-    output: false
+    output: true
+    permalink: /cv/:title
   own:
     output: true
-    permalink: /project/:title
+    permalink: /own/:title
 
 defaults:
   - scope:
