@@ -1,113 +1,85 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Coming Soon</title>
-<link href="tools/style.css" rel="stylesheet" type="text/css" media="screen" />
-<link href="tools/font-awesome/css/font-awesome.css" type="text/css" rel="stylesheet">
-<script type="text/javascript" src="tools/jquery.min.js"></script> 
-<link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-<link href="https://file.myfontastic.com/n6vo44Re5QaWo8oCKShBs7/icons.css" rel="stylesheet">
-<meta name="viewport" content="width=device-width, initial-scale = 1.0, user-scalable = no">
-<script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-</head>
-<body>
+---
+layout: page
+tagline:
+---
+{% assign projects = site.projects | concat: site.own | sort:"date_start" | reverse %}
+{% for project in projects %}
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+{% if project.image %}
+{% assign size = project.image_size | default: 192 %}
+<article class="home" style="min-height: {{size}}px">
+  <img src="{{ site.BASE_PATH }}{{ project.image }}" height="{{size}}" width="{{size}}" style="float: right; margin: 0 15px 0 15px;">
+{% else %}
+<article class="home">
+{% endif %} 
 
-  ga('create', 'UA-75610602-1', 'auto');
-  ga('send', 'pageview', 'Coming Soon');
+  <span class="project-date">
+    {% if project.years %}
+      {{ project.years}}
+    {% elsif project.date_end %}
+      {{ project.date_start | date: "%B %Y" }} - {{ project.date_end | date: "%B %Y" }}
+    {% else %}
+      since {{ project.date_start | date: "%B %Y" }}
+    {% endif %}
+  </span> 
 
-</script>
+  <h2>
+    {% if project.url_store %}
+      <a href="{{ project.url_store }}" target="_blank"><img src="{{ site.BASE_PATH }}/assets/icon/play-store.png" style="vertical-align: baseline;" alt="'{{ project.title }}' on play store"></a>
+    {% endif %}
+    {% if project.url_github %}
+      <a href="{{ project.url_github }}" target="_blank"><img src="{{ site.BASE_PATH }}/assets/icon/github.png" style="vertical-align: baseline;" alt="'{{ project.title }}' on github"></a>
+    {% endif %}
+    {% if project.url_local %}
+      <a href="{{ site.BASE_PATH }}{{ project.url }}">{{ project.title }}</a>
+    {% elsif project.url_external %}
+      <a href="{{ project.url_external }}" target="_blank">{{ project.title }}</a>
+    {% else %}
+      {{ project.title }}
+    {% endif %}
+    {% if project.customer %}
+      <small>for 
+      {% if project.url_customer %}
+        <a href="{{ project.url_customer }}" target="_blank" style="color: #999;">
+      {% endif %}
+      {{ project.customer }}
+      {% if project.url_customer %}
+        </a>
+      {% endif %}
+      </small>
+    {% endif %}
+  </h2>   
 
-	<div class="transy"></div>
-<div class="wrapper">
-	<div class="centered">
-		<div class="header">
-			<h1 id="logo">Sergey Shostko</h1>
-			<p class="line1">- android development -</p>
-		</div>
-		
-		<div class="content">
-				<p>I'm working on something very interesting!</p>
-		</div>		
-		
-		<div class="form">
-			<p>be notified when it will be ready:</p>
-			<div class="mainform">
-				<div class="field"><input type="text" class="field" id="mailme" placeholder="your@email.com"  /></div>
-				<div class="submit"><input class="submit" type="button" value="Okay" onclick="trypush()" /></div>				
-			</div>						
-		</div>
-		<div class="messages">
-			<div class="error" id="error" style="display:none;"><p>please check your email address first...</p></div>
-			<div class="thank" id="thank" style="display:none;"><p>Thanks for being interested in my work...</p></div>
-		</div>
-		
-		
-		
-		<div class="social">
-		<p>
-			<a href="https://vk.com/s.shostko"><span class="socicon-vkontakte"></span></a>
-			<a href="https://www.facebook.com/s.shostko"><span class="socicon-facebook"></span></a>
-			<a href="https://twitter.com/SergeyShostko"><span class="socicon-twitter"></span></a>
-			<a href="https://www.youtube.com/channel/UCJ62fsCKaGzRKblbuYYhjmg"><span class="socicon-youtube"></span></a>
-			<a href="mailto:sergey@shostko.by"><span class="socicon-mail"></span></a>
-			<a href="skype:s.shostko"><span class="socicon-skype"></span></a>
-		</p>
-		</div>
-	</div>
-</div>	
-	
-    <script>		
-		function validate(email) {
-    		var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    		return re.test(email);
-		}
-		
-		function trypush() {
-			var email = $('#mailme').val();
-		  
-			if (validate(email))
-			{
-		  		var currentDate = new Date()
-		  		var day = currentDate.getDate()
-		  	  	var month = currentDate.getMonth() + 1
-	  	  		var year = currentDate.getFullYear()
-				
-		  		var myDataRef = new Firebase('https://blistering-inferno-8251.firebaseio.com/');
-          		myDataRef.push({ 'date': day + "." + month + "." + year , 'email': email });
-				
-          		$('#mailme').val('');
-				$('#thank').fadeIn();				
-				$('#error').fadeOut();
-								
-  				ga('send', 'event', 'mailme', 'success', email);
-			}
-			else
-			{
-				$('#error').fadeIn();
-				
-  				ga('send', 'event', 'mailme', 'error', email);
-			}	
-		}
-	
-	  $('#mailme').keypress(function (e) {
-          if (e.keyCode == 13) {
-			trypush();
-		  }
-		  else
-		  {
-			$('#error').fadeOut();
-			$('#thank').fadeOut();
-		  }
-      });
-    </script>
+  <p> 
+    {% if project.fullview %}
+      {{ project.content }}
+    {% else %}
+      {% if project.shortinfo %}
+        {{ project.shortinfo }}
+      {% elsif project.description %}
+        {{ project.description }}
+      {% else %}
+        {{ project.excerpt }}
+      {% endif %}
+    {% endif %}
+  </p>
 
-</body>
-</html>
+  {% if project.own or project.role %}
+    <p> 
+      {% if project.own %}
+        <span class="project-role">Own project</span>
+      {% elsif project.role %}
+        <span class="project-role">Role:</span> {{ project.role }}
+      {% endif %}
+    </p>
+  {% endif %}
+
+  {% if project.technologies %}
+    <p><span class="project-technologies">Technologies:</span> {{ project.technologies }}</p>
+  {% endif %}
+
+</article>
+
+<hr/>
+
+{% endfor %}

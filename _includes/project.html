@@ -1,0 +1,55 @@
+<div class="page-header">
+  <h1>{{ page.title }} {% if page.customer %}
+      <small>for 
+      {% if page.url_customer %}
+        <a href="{{ project.url_customer }}" target="_blank" style="color: #999;">
+      {% endif %}
+      {{ page.customer }}
+      {% if page.url_customer %}
+        </a>
+      {% endif %}
+      </small>
+    {% endif %}</h1>
+</div>
+	
+<article>
+
+	<div class="col-sm-10">
+
+	 <span class="project-date">
+	    {% if page.years %}
+	    	{{ page.years}}
+	    {% elsif page.date_end %}
+	      {{ page.date_start | date: "%B %Y" }} - {{ page.date_end | date: "%B %Y" }}
+	    {% else %}
+	      since {{ page.date_start | date: "%B %Y" }}
+	    {% endif %}
+	 </span> 
+
+	  {% if page.image %}
+	    <img src="{{ site.BASE_PATH }}{{ page.image }}" height="300" width="300" style="float: right; margin: 15px 15px 15px 15px;">
+	  {% endif %} 
+
+	  <div class="article_body">
+	  {{ content | strip }}
+	  </div> 
+
+	  {% if page.own or page.role %}
+	    <p> 
+	      {% if page.own %}
+	        <span class="project-role">Own project</span>
+	      {% elsif page.role %}
+	        <span class="project-role">Role:</span> {{ page.role }}
+	      {% endif %}
+	    </p>
+	  {% endif %}
+
+	  {% if page.technologies %}
+	      <p><span class="project-technologies">Technologies:</span> {{ page.technologies }}</p>
+	  {% endif %}
+	
+	<div class="col-sm-2 sidebar-2">
+	
+	</div>
+</article>
+<div class="clearfix"></div>

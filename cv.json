@@ -1,0 +1,30 @@
+---
+---
+[
+{%- assign projects = site.projects | concat: site.own | sort:"date_start" | reverse -%}
+{% for project in projects %}
+{
+	{% if project.title %}"title": "{{ project.title }}",{% endif %}
+	{% if project.image %}"image": "{{ project.image }}",{% endif %}
+	{% if project.image_size %}"image_size": "{{ project.image_size }}",{% endif %}
+	{% if project.years %}"years": "{{ project.years }}",{% endif %}
+	{% if project.date_start %}"date_start": "{{ project.date_start }}",{% endif %}
+	{% if project.date_end %}"date_end": "{{ project.date_end }}",{% endif %}
+	{% if project.url_store %}"url_store": "{{ project.url_store }}",{% endif %}
+	{% if project.url_github %}"url_github": "{{ project.url_github }}",{% endif %}
+	{% if project.url_local %}"url_local": "{{ site.BASE_PATH }}{{ project.url }}",{% endif %} 
+	{% if project.url_external %}"url_external": "{{ project.url_external }}",{% endif %} 
+	{% if project.customer %}"customer": "{{ project.customer }}",
+	{% if project.url_customer %}"url_customer": "{{ project.url_customer }}",{% endif %} {% endif %} 
+	{% if project.fullview %}"content": "{{ project.content | strip_newlines  | escape }}",
+	{% elsif project.shortinfo %}"content": "{{ project.shortinfo | strip_newlines | escape }}",
+	{% elsif project.description %}"content": "{{ project.description | strip_newlines | escape }}",
+	{% else %}"content": "{{ project.excerpt | strip_newlines | escape }}",{% endif %}
+	{% if project.own %}"own": true,{%- elsif project.role -%}"role": "{{ project.role }}",{% endif %} 
+	{% if project.technologies %}"technologies": "{{ project.technologies }}",{% endif %} 
+	"id": "{{ project.slug }}"
+}
+{%- if forloop.last != true -%},
+{%- endif -%}
+{% endfor %}
+]
