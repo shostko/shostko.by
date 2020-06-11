@@ -8,6 +8,7 @@ technologies: Jetpack Navigation, MVVM, Dagger2, RxJava, Retrofit, Moshi
 url_external: 
 url_store: https://play.google.com/store/apps/details?id=by.shostko.timetable.grsu
 fullview: false
+url_local: false
 excerpt_separator: <!--more-->
 ---
 Represents timetable of Grodno State University on your Android device.
