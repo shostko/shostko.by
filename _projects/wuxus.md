@@ -10,7 +10,7 @@ technologies: Google Places API, Firebase Messaging, Flexbox, Zxing, Retrofit, B
 url_external: 
 url_customer:
 url_local: false
-url_store: 
+url_store: https://play.google.com/store/apps/details?id=com.wuxus.wuxusproandroid
 fullview: false
 excerpt_separator: <!--more-->
 ---

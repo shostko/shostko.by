@@ -1,6 +1,7 @@
 ---
 title: "Virtual Panel"
 customer: Helvar
+url_customer: https://www.helvar.com/en/
 role:	Software Architect
 date_start: 2018-01-01 00:00:00 +0300
 date_end: 2018-04-30 00:00:00 +0300

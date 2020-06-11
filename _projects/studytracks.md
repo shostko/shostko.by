@@ -10,7 +10,7 @@ technologies: Google InApp Billing, Firebase , Dagger, RxJava, RxBinding, Retrof
 url_external: 
 url_customer:
 url_local: false
-url_store: 
+url_store: https://play.google.com/store/apps/details?id=education.studytracks.app
 fullview: false
 excerpt_separator: <!--more-->
 ---

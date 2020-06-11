@@ -1,6 +1,6 @@
 ---
 title: "Q EMPLOY"
-customer:
+customer: Wiredelta
 role: Senior Android developer
 date_start: 2017-07-01 00:00:00 +0300
 date_end: 2017-09-30 00:00:00 +0300
@@ -8,9 +8,9 @@ image: /assets/project/qemploy.png
 image_size: 192
 technologies: Room Persistence, Firebase Cloud Messaging, Dagger, RxJava, Retrofit, Moxy MVP, Socket.io
 url_external: 
-url_customer:
+url_customer: https://wiredelta.com/
 url_local: false
-url_store: 
+url_store: https://play.google.com/store/apps/details?id=com.wiredelta.qemploy
 fullview: false
 excerpt_separator: <!--more-->
 ---

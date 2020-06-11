@@ -14,6 +14,9 @@ url_store:
 fullview: false
 excerpt_separator: <!--more-->
 ---
+Imagine this all chargers are accessible with your phone. They cost the same and have no hidden fees. You're not keeping track of multiple charging app subscriptions.
+
 One app. One payment. All EV chargers. 
 
-Imagine this all chargers are accessible with your phone. They cost the same and have no hidden fees. You're not keeping track of multiple charging app subscriptions. Life's good. 
+Here is the solution for you. One app. One payment. All EV chargers. 
+Bonnet is a modern super-network of all chargers without RFID cards, price discrepancies, extra fees and dinosaur-age tech. No RFID cards. Every charger can be used and paid for with your phone. 
