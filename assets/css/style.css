@@ -203,3 +203,51 @@ footer {
 ul.dropdown-menu>li>a>i.fa {
     width: 1.3em;
 }
+
+.project-image-s {
+	display: none!important
+}
+
+.project-image-m {
+	display: none!important
+}
+
+.project-image-l {
+	display: none!important
+}
+
+@media {
+	.project-image-s {
+		display: none!important
+	}
+	.project-image-m {
+		display: none!important
+	}
+	.project-image-l {
+		display: block!important
+	}
+}
+
+@media(max-width:767px) {
+	.project-image-s {
+		display: none!important
+	}
+	.project-image-m {
+		display: block!important
+	}
+	.project-image-l {
+		display: none!important
+	}
+}
+
+@media(max-width:400px) {
+	.project-image-s {
+		display: block!important
+	}
+	.project-image-m {
+		display: none!important
+	}
+	.project-image-l {
+		display: none!important
+	}
+}
