@@ -1,0 +1,27 @@
+
+{% if page.project %}	
+	{% assign project = site.own | where: "slug", page.project | first %}
+{% else %}
+	{% assign project = nil %}
+{% endif %}
+
+
+<div class="page-header">
+	{% if project %}
+		<h1>{{ project.title }}</h1>
+		<h1><small>{{ page.title }}</small></h1>
+	{% else %}
+		<h1>{{ page.title }} </h1>
+	{% endif %}
+</div>
+
+{% if project %}
+{% if project.image %}
+{% assign size = project.image_size | default: 192 %}
+  <img class="project-image-l" src="{{ site.BASE_PATH }}{{ project.image }}" height="{{size}}" width="{{size}}" style="float: right; margin: 0 15px 0 15px;">
+  <img class="project-image-m" src="{{ site.BASE_PATH }}{{ project.image }}" height="{{size}}" width="{{size}}" style="float: right; margin: 0 15px 0 15px;">
+  <img class="project-image-s" src="{{ site.BASE_PATH }}{{ project.image }}" height="{{size}}" width="{{size}}" style="margin: 0 15px 0 15px;">
+{% endif %} 
+{% endif %}
+
+{{ content }}
