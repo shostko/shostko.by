@@ -53,7 +53,7 @@ defaults:
     values:
       layout: "project"
       own: true
-      url_local: true
+      url_local: false
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
