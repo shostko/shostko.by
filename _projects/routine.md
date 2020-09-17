@@ -10,7 +10,7 @@ image_size: 192
 technologies: Native Android and iOS, ReactNative, Flutter, KotlinMultiPlatform
 url_external:
 url_local: false
-url_store: 
+url_store: https://play.google.com/store/apps/details?id=com.instinctools.routine
 url_github: https://github.com/instinctools/routine
 fullview: false
 excerpt_separator: <!--more-->
