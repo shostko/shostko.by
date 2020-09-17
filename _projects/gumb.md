@@ -4,7 +4,7 @@ customer:
 url_customer:
 role: Solution Architect
 date_start: 2020-05-22 00:00:00 +0300
-date_end: 
+date_end: 2020-08-14 00:00:00 +0300
 image: /assets/project/gumb.png
 image_size: 192
 technologies: Kotlin Android App, Swift iOS App, React Web App, Amazon Web Services, GetStream.IO, Zoom
