@@ -7,7 +7,7 @@ date_end: 2017-07-30 00:00:00 +0300
 image: /assets/project/studytracks.png
 image_size: 192
 technologies: Google InApp Billing, Firebase , Dagger, RxJava, RxBinding, Retrofit, Social networks SDKs
-url_external: 
+url_external: https://www.studytracks.us/
 url_customer:
 url_local: false
 url_store: https://play.google.com/store/apps/details?id=education.studytracks.app

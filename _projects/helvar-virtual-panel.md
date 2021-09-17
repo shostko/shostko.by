@@ -9,7 +9,7 @@ image: /assets/project/helvar-virtual-panel.png
 image_size: 192
 technologies: Room Persistence, Dagger, RxJava, Retrofit, Custom Widgets, AWS S3, COSU
 url_external: 
-url_customer:
+url_customer: https://www.helvar.com/en/
 url_local: false
 url_store: 
 fullview: false

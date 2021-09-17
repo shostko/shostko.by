@@ -1,5 +1,5 @@
 ---
-title: "Bonnet"
+title: "Bonnet DriverApp"
 customer: BonnetElectric
 url_customer: https://www.bonnetelectric.com/
 role: Lead Android developer
@@ -10,7 +10,7 @@ image_size: 192
 technologies: Jetpack Navigation, GoogleMaps, Firebase Authentication, Pusher, Socket.io, Stripe
 url_external:
 url_local: false
-url_store: 
+url_store: https://play.google.com/store/apps/details?id=com.bonnet
 fullview: false
 excerpt_separator: <!--more-->
 ---

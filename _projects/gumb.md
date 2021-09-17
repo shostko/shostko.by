@@ -8,9 +8,9 @@ date_end: 2020-08-14 00:00:00 +0300
 image: /assets/project/gumb.png
 image_size: 192
 technologies: Kotlin Android App, Swift iOS App, React Web App, Amazon Web Services, GetStream.IO, Zoom
-url_external: https://gumb.ch/
+url_external: https://gumb.app/
 url_local: false
-url_store: 
+url_store: https://play.google.com/store/apps/details?id=com.gumb
 fullview: false
 excerpt_separator: <!--more-->
 ---
