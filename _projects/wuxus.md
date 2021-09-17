@@ -7,7 +7,7 @@ date_end: 2017-03-30 00:00:00 +0300
 image: /assets/project/wuxus.png
 image_size: 192
 technologies: Google Places API, Firebase Messaging, Flexbox, Zxing, Retrofit, Butterknife, Picasso
-url_external: 
+url_external: https://dropboy.com/
 url_customer:
 url_local: false
 url_store: https://play.google.com/store/apps/details?id=com.wuxus.wuxusproandroid
