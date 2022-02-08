@@ -3,7 +3,7 @@ title: "ZippyBus"
 date_start: 2021-04-01 00:00:00 +0300
 image: /assets/project/zippybus.png
 image_size: 192
-technologies: MVVM, Dagger Hilt, Room, Jetpack Navigation, Kotlin Coroutines, WorkManager, Retrofit, Moshi
+technologies: Orbit-MVI, Dagger, Room, Jetpack Navigation, Kotlin Coroutines/Flow, WorkManager, Retrofit, Moshi, FCM
 url_external: https://zippybus.com/
 url_store: https://play.google.com/store/apps/details?id=com.zippybus.zippybus
 fullview: false
