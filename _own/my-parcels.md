@@ -4,7 +4,7 @@ date_start: 2020-04-03 00:00:00 +0300
 image: /assets/project/my-parcels.png
 image_size: 192
 technologies: Jetpack Navigation, MVVM, Dagger2, RxJava, Retrofit, Jsoup
-url_external: 
+url_external: https://myparcels.net/
 url_store: https://play.google.com/store/apps/details?id=by.shostko.myparcels
 fullview: false
 url_local: false
