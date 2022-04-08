@@ -2,7 +2,7 @@
 title: "Insurance franchise app"
 role: Lead Android developer
 date_start: 2021-03-15 00:00:00 +0300
-date_end:
+date_end: 2022-03-18 00:00:00 +0300
 technologies: MVP, Realm, Google Fit, Samsung Health, Pushoosh, Phraseapp/MCMP, 20+ Gradle Flavors, RTL Hebrew locale
 url_external:
 url_local: false
