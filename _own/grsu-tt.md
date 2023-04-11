@@ -1,6 +1,6 @@
 ---
 title: "GrSU TimeTable"
-years: 2014, 2019
+years: 2014, 2019, 2023
 date_start: 2014-11-01 00:00:00 +0300
 image: /assets/project/grsu-tt.png
 image_size: 192
