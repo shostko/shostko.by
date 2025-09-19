@@ -1,11 +1,15 @@
 ---
 title: "Schwäbische News App"
+customer:
 role: Senior Android developer
 years: 2014-2015
 date_start: 2014-07-01 00:00:00 +0300
 image: /assets/project/schw-live.png
-technologies: SQLite, ORM, advanced Gradle, html/js in WebView
+technologies: SQLite, ORM, advanced Gradle,  html/js in WebView
+url_external: 
+url_customer:
 url_local: false
+url_store: https://play.google.com/store/apps/details?id=de.schwaebische.live
 fullview: false
 excerpt_separator: <!--more-->
 ---

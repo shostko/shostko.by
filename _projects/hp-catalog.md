@@ -1,11 +1,16 @@
 ---
-title: "Printer Inks Catalog"
+title: "HP Catalog"
 customer:
 role: Senior Android developer
 date_start: 2016-07-01 00:00:00 +0300
 date_end: 2016-08-30 00:00:00 +0300
+image: /assets/project/hpsps.png
+image_size: 180
 technologies: Butterknife, OkHttp, Retrofit, Timber, Picasso, DBFlow, ExoPlayer, EventBus, MuPDF
+url_external: 
+url_customer:
 url_local: false
+url_store: 
 fullview: false
 excerpt_separator: <!--more-->
 ---

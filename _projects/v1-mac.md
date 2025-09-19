@@ -1,16 +1,20 @@
 ---
-title: "Insurance franchise app"
+title: "Maccabi Vitality"
+customer: "Vitality Insurance"
+url_customer: https://www.vitality.co.uk/
 role: Lead Android developer
 date_start: 2021-03-15 00:00:00 +0300
 date_end: 2022-03-18 00:00:00 +0300
-technologies: MVP, Realm, Google Fit, Samsung Health, Pushoosh, Phraseapp/MCMP, 20+ Gradle Flavors, RTL Hebrew locale
+image: /assets/project/v1-mac.png
+image_size: 192
+technologies: MVP, Realm, Google Fit, Samsung Health, Pushwoosh, Phraseapp, 20+ Gradle Flavors, RTL Hebrew locale
 url_external:
 url_local: false
 url_store:
 fullview: false
 excerpt_separator: <!--more-->
 ---
-Join a qualifying health insurance or life insurance plan, and you could get Apple Watch.
+Join Vitality on a qualifying health insurance or life insurance plan, and you could get Apple Watch.
 
 1. Understand your health.
 2. Get healthier.

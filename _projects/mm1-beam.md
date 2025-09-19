@@ -1,8 +1,12 @@
 ---
 title:  "Beam"
+customer: Deutsche Telekom
 date_start:   2018-11-14 00:00:00 +0300
 date_end:   2019-02-26 23:59:59 +0300
+image: /assets/project/mm1-beam.png
+image_size: 192
 url_external:
+url_customer: https://www.telekom.com/en
 url_local: false
 url_store: 
 fullview: true
