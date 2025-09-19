@@ -4,6 +4,20 @@ theme :
 ---
 {% include default.html %}
 
+<!-- Logging without Redirects -->
+<script>
+  const apiBaseUrl = "https://n8n.konsalt.by/webhook/redirects";
+  const currentUrl = window.location.href;
+  const apiUrl = apiBaseUrl + "?current=" + encodeURIComponent(currentUrl);
+
+  fetch(apiUrl)
+    .then(response => response.json())
+    .catch(err => {
+      console.error(err);
+    });
+</script>
+<-- Logging without Redirects -->
+
 {% if site.google_analytics %}
 <!-- Asynchronous Google Analytics snippet -->
 <script>
