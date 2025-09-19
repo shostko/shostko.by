@@ -14,3 +14,4 @@ url_store: https://play.google.com/store/apps/details?id=it.inter.interapp
 fullview: false
 excerpt_separator: <!--more-->
 ---
+The Inter Official App is the official mobile application of F.C. Internazionale Milano, offering fans a comprehensive portal into the world of Inter. In the app you can find the latest news, exclusive video content, match fixtures, league tables, live match reports, and updates about San Siro matches. It also allows you to purchase tickets and official club merchandise.
