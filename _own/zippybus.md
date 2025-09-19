@@ -9,6 +9,7 @@ url_store: https://play.google.com/store/apps/details?id=com.zippybus.zippybus
 fullview: false
 url_local: false
 excerpt_separator: <!--more-->
+prio: true
 ---
 Always up to date public transport schedule in cities of Belarus.
 

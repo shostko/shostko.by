@@ -2,7 +2,11 @@
 layout: page
 tagline:
 ---
-{% assign projects = site.projects | concat: site.own | sort:"date_start" | reverse %}
+{% assign all_projects = site.projects | concat: site.own %}
+{% assign prio_projects = all_projects | where_exp: "item", "item.prio" | sort: "date_start" | reverse %}
+{% assign other_projects = all_projects | where_exp: "item", "item.prio == nil" | sort: "date_start" | reverse %}
+{% assign projects = prio_projects | concat: other_projects %}
+
 {% for project in projects %}
 
 {% if project.image %}
