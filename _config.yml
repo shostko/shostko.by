@@ -8,6 +8,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 google_analytics: UA-75610602-4
+ya_metrika: 104216616
 
 author:
   name: Sergey Shostko
@@ -17,7 +18,7 @@ author:
   linkedin: sergeyshostko
   twitter: SergeyShostko
   playconsole: 8208994608755751630
-  bio: Android Group Lead at *instinctools
+  bio: CEO @ Wisolut Technologies
   email_md5: 42dfae824cdccebc0e9180487d59ccb0
 
 BASE_PATH:
