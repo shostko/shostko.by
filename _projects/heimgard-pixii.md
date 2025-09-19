@@ -5,6 +5,8 @@ url_customer: https://www.eltekholding.com/
 role: Kotlin Multiplatform Mobile & Android developer
 date_start: 2023-03-27 00:00:00 +0300
 date_end: 2024-04-30 00:00:00 +0300
+image: /assets/project/pixii.png
+image_size: 192
 technologies: Jetpack Compose, KMM, Kotlin Coroutines, Koin, Ktor, Polyglot
 url_external: https://www.pixii.com/
 url_local: false
