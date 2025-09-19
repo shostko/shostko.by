@@ -10,7 +10,7 @@ image_size: 192
 technologies: Jetpack Compose, KMM, Kotlin Coroutines, SqlDelight, Koin, Ktor, Polyglot, Moko-Resources
 url_external:
 url_local: false
-url_store:
+url_store: https://play.google.com/store/apps/details?id=it.inter.interapp
 fullview: false
 excerpt_separator: <!--more-->
 ---
